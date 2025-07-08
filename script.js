@@ -285,3 +285,64 @@ document.addEventListener('DOMContentLoaded', function() {
         sectionObserver.observe(section);
     });
 });
+
+// Xbox Controller Joystick Animation
+document.addEventListener('DOMContentLoaded', function() {
+    const leftJoystick = document.querySelector('.left-joystick');
+    const rightJoystick = document.querySelector('.right-joystick');
+    const controller = document.querySelector('.xbox-controller');
+    
+    if (leftJoystick && rightJoystick && controller) {
+        document.addEventListener('mousemove', function(e) {
+            const controllerRect = controller.getBoundingClientRect();
+            const controllerCenterX = controllerRect.left + controllerRect.width / 2;
+            const controllerCenterY = controllerRect.top + controllerRect.height / 2;
+            
+            // Calculate mouse position relative to controller
+            const mouseX = e.clientX - controllerCenterX;
+            const mouseY = e.clientY - controllerCenterY;
+            
+            // Normalize and limit movement (max 8px from center)
+            const maxMovement = 8;
+            const distance = Math.sqrt(mouseX * mouseX + mouseY * mouseY);
+            
+            let moveX = mouseX;
+            let moveY = mouseY;
+            
+            if (distance > maxMovement) {
+                moveX = (mouseX / distance) * maxMovement;
+                moveY = (mouseY / distance) * maxMovement;
+            }
+            
+            // Apply movement with slight variation between joysticks
+            leftJoystick.style.transform = `translate(${moveX * 0.3}px, ${moveY * 0.3}px)`;
+            rightJoystick.style.transform = `translate(${moveX * 0.4}px, ${moveY * 0.4}px)`;
+        });
+        
+        // Add subtle controller hover effect
+        controller.addEventListener('mouseenter', function() {
+            controller.style.transform = 'scale(1.05)';
+            controller.style.transition = 'transform 0.3s ease';
+        });
+        
+        controller.addEventListener('mouseleave', function() {
+            controller.style.transform = 'scale(1)';
+            // Reset joysticks to center when mouse leaves
+            leftJoystick.style.transform = 'translate(0, 0)';
+            rightJoystick.style.transform = 'translate(0, 0)';
+        });
+        
+        // Add button press animations
+        const buttons = document.querySelectorAll('.btn');
+        buttons.forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(0.9)';
+                this.style.transition = 'transform 0.1s ease';
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+    }
+});
