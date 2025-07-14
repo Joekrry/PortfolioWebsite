@@ -1,4 +1,4 @@
-// Mobile Navigation Toggle
+
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
         navMenu.classList.toggle('active');
     });
     
-    // Close menu when clicking on a link
     document.querySelectorAll('.nav-menu a').forEach(link => {
         link.addEventListener('click', function() {
             hamburger.classList.remove('active');
@@ -17,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -31,7 +29,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Scroll animations
 function handleScrollAnimations() {
     const elements = document.querySelectorAll('.scroll-animate');
     
@@ -45,21 +42,17 @@ function handleScrollAnimations() {
     });
 }
 
-// Add scroll animate class to sections
 document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
         section.classList.add('scroll-animate');
     });
     
-    // Initial check
     handleScrollAnimations();
 });
 
-// Listen for scroll events
 window.addEventListener('scroll', handleScrollAnimations);
 
-// Header background change on scroll
 window.addEventListener('scroll', function() {
     const header = document.querySelector('header');
     if (window.scrollY > 100) {
@@ -71,7 +64,6 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Typing animation for hero text
 function typeWriter(element, text, speed = 100) {
     let i = 0;
     element.innerHTML = '';
@@ -87,7 +79,6 @@ function typeWriter(element, text, speed = 100) {
     type();
 }
 
-// Initialize typing animation
 document.addEventListener('DOMContentLoaded', function() {
     const heroTitle = document.querySelector('.hero h1');
     if (heroTitle) {
@@ -98,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Parallax effect for hero section
 window.addEventListener('scroll', function() {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero');
@@ -107,7 +97,6 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Interactive tech items
 document.addEventListener('DOMContentLoaded', function() {
     const techItems = document.querySelectorAll('.tech-item');
     
@@ -122,7 +111,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Contact form handling (if needed)
 function handleContactForm() {
     const contactLinks = document.querySelectorAll('.contact-link');
     
@@ -136,10 +124,8 @@ function handleContactForm() {
     });
 }
 
-// Initialize contact form handling
 document.addEventListener('DOMContentLoaded', handleContactForm);
 
-// Intersection Observer for better performance
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -153,7 +139,6 @@ const observer = new IntersectionObserver(function(entries) {
     });
 }, observerOptions);
 
-// Observe all sections for animations
 document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
@@ -161,20 +146,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Dark mode toggle (bonus feature)
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
     localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
 }
 
-// Load dark mode preference
 document.addEventListener('DOMContentLoaded', function() {
     if (localStorage.getItem('darkMode') === 'true') {
         document.body.classList.add('dark-mode');
     }
 });
 
-// Copy email to clipboard functionality
 function copyToClipboard(text) {
     navigator.clipboard.writeText(text).then(function() {
         // Show success message
@@ -200,7 +182,6 @@ function copyToClipboard(text) {
     });
 }
 
-// Add copy functionality to email links
 document.addEventListener('DOMContentLoaded', function() {
     const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
     
@@ -213,7 +194,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Lazy loading for images (when added)
 function lazyLoadImages() {
     const images = document.querySelectorAll('img[data-src]');
     
@@ -231,10 +211,8 @@ function lazyLoadImages() {
     images.forEach(img => imageObserver.observe(img));
 }
 
-// Initialize lazy loading
 document.addEventListener('DOMContentLoaded', lazyLoadImages);
 
-// Performance optimization: Debounce scroll events
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
@@ -247,20 +225,16 @@ function debounce(func, wait) {
     };
 }
 
-// Apply debounce to scroll events
 const debouncedScrollHandler = debounce(function() {
     handleScrollAnimations();
 }, 10);
 
 window.addEventListener('scroll', debouncedScrollHandler);
 
-// Analytics tracking (placeholder)
 function trackEvent(eventName, eventData) {
-    // Add your analytics tracking here
     console.log(`Event: ${eventName}`, eventData);
 }
 
-// Track page load
 document.addEventListener('DOMContentLoaded', function() {
     trackEvent('page_load', {
         url: window.location.href,
@@ -268,7 +242,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Track section views
 const sectionObserver = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -285,66 +258,3 @@ document.addEventListener('DOMContentLoaded', function() {
         sectionObserver.observe(section);
     });
 });
-
-// Xbox Controller Joystick Animation
-document.addEventListener('DOMContentLoaded', function() {
-    const leftJoystick = document.querySelector('.left-joystick');
-    const rightJoystick = document.querySelector('.right-joystick');
-    const controller = document.querySelector('.xbox-controller');
-    
-    if (leftJoystick && rightJoystick && controller) {
-        document.addEventListener('mousemove', function(e) {
-            const controllerRect = controller.getBoundingClientRect();
-            const controllerCenterX = controllerRect.left + controllerRect.width / 2;
-            const controllerCenterY = controllerRect.top + controllerRect.height / 2;
-            
-            // Calculate mouse position relative to controller
-            const mouseX = e.clientX - controllerCenterX;
-            const mouseY = e.clientY - controllerCenterY;
-            
-            // Normalize and limit movement (max 8px from center)
-            const maxMovement = 8;
-            const distance = Math.sqrt(mouseX * mouseX + mouseY * mouseY);
-            
-            let moveX = mouseX;
-            let moveY = mouseY;
-            
-            if (distance > maxMovement) {
-                moveX = (mouseX / distance) * maxMovement;
-                moveY = (mouseY / distance) * maxMovement;
-            }
-            
-            // Apply movement with slight variation between joysticks
-            leftJoystick.style.transform = `translate(${moveX * 0.3}px, ${moveY * 0.3}px)`;
-            rightJoystick.style.transform = `translate(${moveX * 0.4}px, ${moveY * 0.4}px)`;
-        });
-        
-        // Add subtle controller hover effect
-        controller.addEventListener('mouseenter', function() {
-            controller.style.transform = 'scale(1.05)';
-            controller.style.transition = 'transform 0.3s ease';
-        });
-        
-        controller.addEventListener('mouseleave', function() {
-            controller.style.transform = 'scale(1)';
-            // Reset joysticks to center when mouse leaves
-            leftJoystick.style.transform = 'translate(0, 0)';
-            rightJoystick.style.transform = 'translate(0, 0)';
-        });
-        
-        // Add button press animations
-        const buttons = document.querySelectorAll('.btn');
-        buttons.forEach(button => {
-            button.addEventListener('mouseenter', function() {
-                this.style.transform = 'scale(0.9)';
-                this.style.transition = 'transform 0.1s ease';
-            });
-            
-            button.addEventListener('mouseleave', function() {
-                this.style.transform = 'scale(1)';
-            });
-        });
-    }
-    
-});
-

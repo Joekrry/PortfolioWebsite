@@ -1,4 +1,3 @@
-/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +8,7 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     color: #f5f5dc;
-    background-color: #1a1a1a;
+    background-color: #0f0f0f;
 }
 
 .container {
@@ -18,9 +17,8 @@ body {
     padding: 0 20px;
 }
 
-/* Header */
 header {
-    background: #2a2a2a;
+    background: #0f0f0f !important;
     box-shadow: 0 2px 20px rgba(0,0,0,0.5);
     position: fixed;
     width: 100%;
@@ -61,13 +59,13 @@ header {
     color: #f5f5dc;
 }
 
-.hamburger {
+.CompactMenu {
     display: none;
     flex-direction: column;
     cursor: pointer;
 }
 
-.hamburger span {
+.CompactMenu span {
     width: 25px;
     height: 3px;
     background: #f5f5dc;
@@ -75,10 +73,9 @@ header {
     transition: 0.3s;
 }
 
-/* Hero Section */
 .hero {
     padding: 120px 0 80px;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    background: linear-gradient(180deg, #0f0f0f 50%, #0f0f0f 100%);
     color: #f5f5dc;
     min-height: 100vh;
     display: flex;
@@ -110,7 +107,7 @@ header {
     justify-content: center;
     width: 50px;
     height: 50px;
-    background: rgba(245,245,220,0.1);
+    background: rgba(245,245,220,0.08);
     border-radius: 50%;
     color: #f5f5dc;
     text-decoration: none;
@@ -119,8 +116,8 @@ header {
 }
 
 .social-link:hover {
-    background: rgba(245,245,220,0.2);
-    transform: translateY(-2px);
+    background: rgba(245,245,220,0.3);
+    transform: translateY(-3px);
 }
 
 .hero-description p {
@@ -146,18 +143,7 @@ header {
 }
 
 .profile-img:hover .hand-emoji {
-    animation: wave 0.6s ease-in-out;
-}
-
-.controller-emoji {
-    font-size: 8rem;
-    transition: transform 0.3s ease;
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
-    animation: controller-float 3s ease-in-out infinite;
-}
-
-.profile-img:hover .controller-emoji {
-    animation: controller-tilt 0.8s ease-in-out;
+    animation: wave 1s ease-in-out infinite;
 }
 
 @keyframes wave {
@@ -171,22 +157,6 @@ header {
     100% { transform: rotate(0deg); }
 }
 
-@keyframes controller-float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    25% { transform: translateY(-10px) rotate(2deg); }
-    50% { transform: translateY(-5px) rotate(-1deg); }
-    75% { transform: translateY(-8px) rotate(1deg); }
-}
-
-@keyframes controller-tilt {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(-15deg) scale(1.1); }
-    50% { transform: rotate(10deg) scale(1.05); }
-    75% { transform: rotate(-5deg) scale(1.1); }
-    100% { transform: rotate(0deg) scale(1); }
-}
-
-/* Section Styles */
 section {
     padding: 80px 0;
 }
@@ -199,9 +169,9 @@ h2 {
     color: #f5f5dc;
 }
 
-/* Technologies Section */
+
 .technologies {
-    background: #2a2a2a;
+    background: #0f0f0f;
 }
 
 .tech-grid {
@@ -223,7 +193,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     padding: 1.5rem;
-    background: #3a3a3a;
+    background: #1f1f1f;
     border-radius: 12px;
     transition: all 0.3s;
     border: 2px solid transparent;
@@ -248,9 +218,8 @@ h2 {
     font-size: 0.9rem;
 }
 
-/* Experience Section */
 .experience {
-    background: #1a1a1a;
+    background: #0f0f0f;
 }
 
 .experience-list {
@@ -259,7 +228,7 @@ h2 {
 }
 
 .experience-item {
-    background: #2a2a2a;
+    background: #1f1f1f;
     padding: 2rem;
     border-radius: 12px;
     margin-bottom: 2rem;
@@ -289,28 +258,7 @@ h2 {
     text-decoration: underline;
 }
 
-.role {
-    display: block;
-    color: #e8e8e8;
-    font-weight: 500;
-    margin-bottom: 0.25rem;
-}
 
-.duration {
-    color: #c0c0c0;
-    font-size: 0.9rem;
-}
-
-/* Work Section */
-.work {
-    background: #2a2a2a;
-}
-
-.work-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2rem;
-}
 
 .work-item {
     background: #3a3a3a;
@@ -356,7 +304,7 @@ h2 {
 }
 
 .tag {
-    background: #4a4a4a;
+    background: #2f2f2f;
     color: #e8e8e8;
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
@@ -372,12 +320,12 @@ h2 {
 }
 
 .learn-more:hover {
-    color: #e8e8e8;
+    transform: translateY(-2px);
 }
 
-/* Projects Section */
+
 .projects {
-    background: #1a1a1a;
+    background: #0f0f0f; /* Darker projects section */
 }
 
 .projects-grid {
@@ -387,7 +335,7 @@ h2 {
 }
 
 .project-item {
-    background: #2a2a2a;
+    background: #1f1f1f;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.5);
@@ -420,73 +368,8 @@ h2 {
     flex-wrap: wrap;
 }
 
-.more-projects, .more-posts {
-    text-align: center;
-    margin-top: 2rem;
-}
-
-.more-link {
-    color: #f5f5dc;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.1rem;
-    transition: color 0.3s;
-}
-
-.more-link:hover {
-    color: #e8e8e8;
-}
-
-/* Blog Section */
-.blog {
-    background: #2a2a2a;
-}
-
-.blog-posts {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.blog-post {
-    background: #3a3a3a;
-    padding: 2rem;
-    border-radius: 12px;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
-    transition: transform 0.3s;
-}
-
-.blog-post:hover {
-    transform: translateY(-2px);
-}
-
-.blog-date {
-    color: #c0c0c0;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-}
-
-.blog-post h3 {
-    margin-bottom: 1rem;
-}
-
-.blog-post h3 a {
-    color: #f5f5dc;
-    text-decoration: none;
-}
-
-.blog-post h3 a:hover {
-    color: #e8e8e8;
-}
-
-.blog-post p {
-    color: #e8e8e8;
-    line-height: 1.6;
-}
-
-/* Contact Section */
 .contact {
-    background: #1a1a1a;
+    background: #0f0f0f;
 }
 
 .contact-info {
@@ -513,7 +396,7 @@ h2 {
     align-items: center;
     gap: 0.5rem;
     padding: 1rem 1.5rem;
-    background: #2a2a2a;
+    background: #1f1f1f; /* Darker contact link */
     border-radius: 8px;
     color: #f5f5dc;
     text-decoration: none;
@@ -530,13 +413,12 @@ h2 {
     font-size: 1.2rem;
 }
 
-/* Footer */
 footer {
-    background: #1a1a1a;
+    background: #0f0f0f; /* Darker footer */
     color: #f5f5dc;
     padding: 2rem 0;
     text-align: center;
-    border-top: 1px solid #3a3a3a;
+    border-top: 1px solid #0f0f0f;
 }
 
 .footer-content p {
@@ -568,7 +450,7 @@ footer {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: #2a2a2a;
+        background-color: #0f0f0f;
         width: 100%;
         text-align: center;
         transition: 0.3s;
