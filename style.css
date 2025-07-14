@@ -53,6 +53,7 @@ header {
     color: #e8e8e8;
     font-weight: 500;
     transition: color 0.3s;
+    align-items: right
 }
 
 .nav-menu a:hover {
