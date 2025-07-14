@@ -20,7 +20,33 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
+        const linkText = this.textContent.toLowerCase().trim();
+        
         if (target) {
+            if (linkText === 'about' || linkText === 'joseph kerry') {
+                const targetPosition = target.offsetTop - 70;
+                const startPosition = window.pageYOffset;
+                const distance = targetPosition - startPosition;
+                const duration = 250;
+                let start = null;
+                
+                function fastScrollAnimation(currentTime) {
+                    if (start === null) start = currentTime;
+                    const timeElapsed = currentTime - start;
+                    const progress = Math.min(timeElapsed / duration, 1);
+                    const easeInOutQuad = progress < 0.5 
+                        ? 2 * progress * progress 
+                        : -1 + (4 - 2 * progress) * progress;
+                    
+                    window.scrollTo(0, startPosition + distance * easeInOutQuad);
+                    
+                    if (timeElapsed < duration) {
+                        requestAnimationFrame(fastScrollAnimation);
+                    }
+                }
+                
+                requestAnimationFrame(fastScrollAnimation);
+            } else {
             target.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
