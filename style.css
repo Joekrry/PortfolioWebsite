@@ -50,7 +50,7 @@ header {
 
 .nav-menu a {
     text-decoration: none;
-    color: #e8e8e8;
+    color: #f5f5dc;
     font-weight: 500;
     transition: color 0.3s;
     align-items: right
@@ -58,6 +58,7 @@ header {
 
 .nav-menu a:hover {
     color: #00ff88;
+    transform: translate y(-2px);
 }
 
 .work-status {
