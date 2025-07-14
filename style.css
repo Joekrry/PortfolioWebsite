@@ -276,6 +276,27 @@ h2 {
     font-size: 0.9rem;
 }
 
+.tech-status {
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    margin-top: 0.3rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tech-status.learnt {
+    color: #00ff88 !important;
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+.tech-status.learning {
+    color: #ffa500 !important;
+    background: rgba(255, 165, 0, 0.1);
+    border: 1px solid rgba(255, 165, 0, 0.3);
+}
 .experience {
     background: #0f0f0f;
 }
@@ -577,6 +598,13 @@ footer {
     }
 }
 
+    
+    .tech-status {
+        font-size: 0.65rem !important;
+        padding: 0.15rem 0.4rem;
+        margin-top: 0.25rem;
+    }
+}
 @media (max-width: 480px) {
     .hero {
         padding: 100px 0 60px;
