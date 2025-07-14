@@ -90,7 +90,7 @@ window.addEventListener('scroll', function() {
     }
 });
 
-function typeWriter(element, text, speed = 100) {
+function typeWriter(element, text, speed = 150) {
     let i = 0;
     element.innerHTML = '';
     
