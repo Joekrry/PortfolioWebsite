@@ -518,7 +518,6 @@ footer {
     margin: 0 0.5rem;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -604,7 +603,7 @@ footer {
         padding: 0.15rem 0.4rem;
         margin-top: 0.25rem;
     }
-}
+
 @media (max-width: 480px) {
     .hero {
         padding: 100px 0 60px;
