@@ -661,6 +661,8 @@ html {
     color: #66b3ff;
     text-decoration: none;
     transition: color 0.3s;
+    font-size: 1.25rem;
+    font-weight:500;  
 }
 
 .blog-post a:hover {
