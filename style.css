@@ -671,7 +671,7 @@ html {
 }
 
 .blog-post h6 {
-    opacity: 0.5
+    opacity: 0.5;
 }
 .blog-posts {
     font-family:inherit;
