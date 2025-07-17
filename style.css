@@ -657,8 +657,6 @@ html {
     transform: translateY(0);
 }
 
-.
-
 .blog-post h3 a {
     color: #66b3ff;
     text-decoration: none;
@@ -676,6 +674,10 @@ html {
 .blog-posts {
     font-family:inherit;
 }
+.blog-post h3 a:visited {
+    color: #b19cd9;
+}
+
 
     
 
