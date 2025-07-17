@@ -657,13 +657,13 @@ html {
     transform: translateY(0);
 }
 
-.blog-post h3 a {
+.blog-post a {
     color: #66b3ff;
     text-decoration: none;
     transition: color 0.3s;
 }
 
-.blog-post h3 a:hover {
+.blog-post a:hover {
     color: #99ccff;
     text-decoration: underline;
 }
@@ -674,8 +674,8 @@ html {
 .blog-posts {
     font-family:inherit;
 }
-.blog-post h3 a:visited {
-    color: #b19cd9;
+.blog-post a {
+    color: #b19cd9; 
 }
 
 
