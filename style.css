@@ -405,7 +405,7 @@ h2 {
 
 
 .projects {
-    background: #0f0f0f; /* Darker projects section */
+    background: #0f0f0f;
 }
 
 .projects-grid {
@@ -476,7 +476,7 @@ h2 {
     align-items: center;
     gap: 0.5rem;
     padding: 1rem 1.5rem;
-    background: #1f1f1f; /* Darker contact link */
+    background: #1f1f1f;
     border-radius: 8px;
     color: #f5f5dc;
     text-decoration: none;
@@ -494,7 +494,7 @@ h2 {
 }
 
 footer {
-    background: #0f0f0f; /* Darker footer */
+    background: #0f0f0f;
     color: #f5f5dc;
     padding: 2rem 0;
     text-align: center;
@@ -627,12 +627,10 @@ footer {
     }
 }
 
-/* Smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Loading animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -648,7 +646,6 @@ html {
     animation: fadeInUp 0.8s ease-out;
 }
 
-/* Scroll animations */
 .scroll-animate {
     opacity: 0;
     transform: translateY(30px);
@@ -660,6 +657,8 @@ html {
     transform: translateY(0);
 }
 
+.
+
 .blog-post h3 a {
     color: #66b3ff;
     text-decoration: none;
@@ -670,5 +669,13 @@ html {
     color: #99ccff;
     text-decoration: underline;
 }
+
+.blog-post h6 {
+    opacity: 0.5
+}
+.blog-posts {
+    font-family:inherit;
+}
+
     
 
