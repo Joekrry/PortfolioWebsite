@@ -403,9 +403,6 @@ h2 {
     transform: translateY(-2px);
 }
 
-
-.projects {}
-
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -415,12 +412,12 @@ h2 {
 }
 
 .project-item {
-    padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
-    transition: transform 0.3s;
+    padding: 2rem;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-item::before {
@@ -433,7 +430,7 @@ h2 {
     background-size: cover;
     background-position: center;
     filter: blur(10px);
-    opacity: 0.2;
+    opacity: 0.4;
     z-index: -1;
     transition: all 0.4s ease;
 }
