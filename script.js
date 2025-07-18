@@ -1,16 +1,16 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
+    const compactMenu = document.querySelector('.CompactMenu');
     const navMenu = document.querySelector('.nav-menu');
     
-    hamburger.addEventListener('click', function() {
-        hamburger.classList.toggle('active');
+    compactMenu.addEventListener('click', function() {
+        compactMenu.classList.toggle('active');
         navMenu.classList.toggle('active');
     });
     
     document.querySelectorAll('.nav-menu a').forEach(link => {
         link.addEventListener('click', function() {
-            hamburger.classList.remove('active');
+            compactMenu.classList.remove('active');
             navMenu.classList.remove('active');
         });
     });

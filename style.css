@@ -122,14 +122,46 @@ header {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: rgba(245,245,220,0.08);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(245,245,220,0.1);
+    z-index: 1001;
+    transition: all 0.3s ease;
+}
+
+.CompactMenu:hover {
+    background: rgba(245,245,220,0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
 .CompactMenu span {
-    width: 25px;
-    height: 3px;
+    width: 18px;
+    height: 2px;
     background: #f5f5dc;
-    margin: 3px 0;
+    margin: 2px 0;
     transition: 0.3s;
+    border-radius: 1px;
+}
+
+.CompactMenu.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.CompactMenu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.CompactMenu.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 .hero {
@@ -243,7 +275,7 @@ header {
     font-size: 1rem;
     font-weight: 500;
     white-space: nowrap;
-    z-index: 3;
+    z-index: 0;
     opacity: 1;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(0,0,0,0.);
@@ -321,6 +353,7 @@ h2 {
 
 .technologies {
     background: #0f0f0f;
+    z-index: 5;
 }
 
 .tech-grid {
@@ -390,6 +423,7 @@ h2 {
 }
 .experience {
     background: #0f0f0f;
+    z-index: 5;
 }
 
 .experience-grid {
@@ -419,16 +453,21 @@ h2 {
 
 .experience-header {
     margin-bottom: 1rem;
+    color: #f5f5dc;
 }
 
 .experience-header h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    color: #f5f5dc;
+    font-weight: 400;
 }
 
 .experience-header a {
     color: #f5f5dc;
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
 .experience-header a:hover {
@@ -442,7 +481,10 @@ h2 {
     transition: color 0.3s;
 }
 
-
+.projects {
+    background: #0f0f0f;
+    z-index: 5;
+}
 
 .projects-grid {
     display: grid;
@@ -595,7 +637,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .hamburger {
+    .CompactMenu {
         display: flex;
     }
     
@@ -610,6 +652,7 @@ footer {
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0,0,0,0.5);
         padding: 2rem 0;
+
     }
     
     .nav-menu.active {
@@ -653,10 +696,9 @@ footer {
         grid-template-columns: 1fr;
     }
     
-    .work-grid, .projects-grid, .experience-list {
+    .work-grid, .projects-grid {
         grid-template-columns: 1fr;
     }
-    
     .reference-item {
         flex-direction: column;
         text-align: center;
@@ -685,6 +727,11 @@ footer {
     
     .tech-item span {
         font-size: 0.8rem;
+    }
+    
+    .experience-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
     }
 }
 
@@ -729,6 +776,18 @@ footer {
     
     section {
         padding: 60px 0;
+    }
+    
+    .CompactMenu {
+        bottom: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .CompactMenu span {
+        width: 16px;
+        height: 2px;
     }
 }
 
