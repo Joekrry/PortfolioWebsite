@@ -52,6 +52,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 block: 'start'
             });
         }
+        }
     });
 });
 
