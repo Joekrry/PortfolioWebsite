@@ -392,9 +392,13 @@ h2 {
     background: #0f0f0f;
 }
 
-.experience-list {
-    max-width: 800px;
-    margin: 0 auto;
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    color: #f5f5dc;
+    margin-bottom: 2rem;
+    padding: 0 20px;
 }
 
 .experience-item {
