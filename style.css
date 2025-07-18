@@ -474,6 +474,10 @@ h2 {
     text-decoration: underline;
 }
 
+.duration {
+    opacity: 50%
+        }
+
 .learn-more {
     color: #f5f5dc;
     text-decoration: none;
