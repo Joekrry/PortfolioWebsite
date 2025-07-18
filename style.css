@@ -403,11 +403,14 @@ h2 {
 
 .experience-item {
     background: #1f1f1f;
-    padding: 2rem;
-    border-radius: 12px;
+    color: #f5f5dc;
     margin-bottom: 2rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
-    transition: transform 0.3s;
+   border-radius: 12px;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
 }
 
 .experience-item:hover {
@@ -430,51 +433,6 @@ h2 {
 
 .experience-header a:hover {
     text-decoration: underline;
-}
-
-
-
-.work-item {
-    background: #3a3a3a;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform 0.3s;
-}
-
-.work-item:hover {
-    transform: translateY(-5px);
-}
-
-.work-image {
-    height: 200px;
-    background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #f5f5dc;
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-.placeholder-bg {
-    text-align: center;
-}
-
-.work-content {
-    padding: 1.5rem;
-}
-
-.work-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #f5f5dc;
-}
-
-.work-tags {
-    display: flex;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-    flex-wrap: wrap;
 }
 
 .tag {
