@@ -404,9 +404,7 @@ h2 {
 }
 
 
-.projects {
-    background: #0f0f0f;
-}
+.projects {}
 
 .projects-grid {
     display: grid;
