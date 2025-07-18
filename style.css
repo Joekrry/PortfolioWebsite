@@ -486,6 +486,10 @@ h2 {
     color: #f5f5dc;
 }
 
+.experience-header a:visited {
+     color: #f5f5dc;
+}
+
 .duration {
     opacity: 50%
         }
