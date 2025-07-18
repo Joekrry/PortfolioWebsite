@@ -436,7 +436,6 @@ h2 {
 }
 
 .experience-item {
-    background: #1f1f1f;
     color: #f5f5dc;
     margin-bottom: 2rem;
    border-radius: 12px;
@@ -447,31 +446,45 @@ h2 {
     transition: all 0.3s ease;
 }
 
+
 .experience-item:hover {
-    transform: translateY(-10px);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+.experience-item:hover::before {
+    opacity: 0.6;
+    filter: blur(2px);
+    transform: scale(1.02);
+}
+
+
+.experience-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    opacity: 0.4;
+    z-index: -1;
+    transition: all 0.4s ease;
+}
+
+.experience-item:nth-child(1)::before {
+    background-image: url('imgs/ntusoftwareengineering.jpg');
+}
+
+.experience-item:nth-child(2)::before {
+    background-image: url('imgs/ntulawschool.jpg');
 }
 
 .experience-header {
     margin-bottom: 1rem;
     color: #f5f5dc;
-}
-
-.experience-header h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: #f5f5dc;
-    font-weight: 400;
-}
-
-.experience-header a {
-    color: #f5f5dc;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.experience-header a:hover {
-    text-decoration: underline;
 }
 
 .duration {
