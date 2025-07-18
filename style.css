@@ -569,6 +569,21 @@ h2 {
     flex-wrap: wrap;
 }
 
+.tag {
+    background: #1f1f1f;
+    color: #f5f5dc;
+    padding: 0.3rem;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+}
+.tag:hover {
+    background: #3a3a3a;
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
 .contact {
     background: #0f0f0f;
 }
