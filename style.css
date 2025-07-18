@@ -661,7 +661,7 @@ html {
     color: #66b3ff;
     text-decoration: none;
     transition: color 0.3s;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight:500;  
 }
 
@@ -676,7 +676,7 @@ html {
 .blog-posts {
     font-family:inherit;
 }
-.blog-post a {
+.blog-post a:visited {
     color: #b19cd9; 
 }
 
