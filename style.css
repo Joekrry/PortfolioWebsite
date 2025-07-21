@@ -18,7 +18,7 @@ body {
 }
 
 header {
-    background: #0f0f0f !important;
+    background: #0a0a0a !important;
     box-shadow: 0 2px 20px rgba(0,0,0,1);
     position: fixed;
     width: 100%;
@@ -267,8 +267,8 @@ header {
     top: -45px;
     left: 50%;
     transform: translateX(-50%);
-    background: #8DB600;
-    color: white;
+    background: #00ff88;
+    color: black;
     padding: 2px 18px;
     border-radius: 20px;
     font-family: inherit;
@@ -291,7 +291,7 @@ header {
     height: 0;
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
-    border-top: 12px solid #8DB600;
+    border-top: 12px solid #00ff88;
 }
 
 .profile-img:hover .speech-bubble {
@@ -323,7 +323,7 @@ header {
 
 @keyframes glowEffect {
     to {
-        box-shadow: 0 0 30px 4px #8DB600, 0 0 60px 8px rgba(0, 255, 136, 0.3);
+        box-shadow: 0 0 30px 4px #00ff88, 0 0 60px 8px rgba(0, 255, 136, 0.3);
     }
 }
 
