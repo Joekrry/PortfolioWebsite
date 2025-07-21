@@ -19,7 +19,7 @@ body {
 
 header {
     background: #0f0f0f !important;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 20px rgba(0,0,0,1);
     position: fixed;
     width: 100%;
     top: 0;
