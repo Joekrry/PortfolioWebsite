@@ -14,6 +14,145 @@ document.addEventListener('DOMContentLoaded', function() {
             navMenu.classList.remove('active');
         });
     });
+
+    const techTrack = document.getElementById('techTrack');
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+    
+    if (techTrack && prevBtn && nextBtn) {
+        let currentIndex = 0;
+        let itemsToShow = getItemsToShow();
+        const originalItems = Array.from(techTrack.children);
+        const totalItems = originalItems.length;
+
+        function setupInfiniteLoop() {
+            
+            techTrack.innerHTML = '';
+            
+            
+            for (let i = 0; i < 3; i++) { 
+                originalItems.forEach(item => {
+                    const clone = item.cloneNode(true);
+                    techTrack.appendChild(clone);
+                });
+            }
+            
+           
+            currentIndex = totalItems;
+            updateCarousel(false); 
+        }
+        
+        function getItemsToShow() {
+            const width = window.innerWidth;
+            if (width >= 1200) return 5;
+            if (width >= 992) return 4;
+            if (width >= 768) return 3;
+            if (width >= 576) return 2;
+            return 1;
+        }
+        
+        function updateCarousel(useTransition = true) {
+            const itemWidth = 120;
+            const gap = 32;
+            const offset = currentIndex * (itemWidth + gap);
+            
+            if (useTransition) {
+                techTrack.style.transition = 'transform 0.5s ease';
+            } else {
+                techTrack.style.transition = 'none';
+            }
+            
+            techTrack.style.transform = `translateX(-${offset}px)`;
+            
+            if (useTransition) {
+                if (window.carouselResetTimeout) {
+                    clearTimeout(window.carouselResetTimeout);
+                }
+                
+                window.carouselResetTimeout = setTimeout(() => {
+                    if (currentIndex >= totalItems * 2) {
+                        currentIndex = totalItems;
+                        resetCarouselPosition();
+                    } else if (currentIndex <= 0) {
+                        currentIndex = totalItems;
+                        resetCarouselPosition();
+                    }
+                }, 520);
+            }
+        }
+        
+        function resetCarouselPosition() {
+            const itemWidth = 120;
+            const gap = 32;
+            const offset = currentIndex * (itemWidth + gap);
+            
+            requestAnimationFrame(() => {
+                techTrack.style.transition = 'none';
+                techTrack.style.transform = `translateX(-${offset}px)`;
+                
+                requestAnimationFrame(() => {
+                    techTrack.offsetHeight;
+                    techTrack.style.transition = 'transform 0.5s ease';
+                });
+            });
+        }
+        
+        function goToPrev() {
+            if (window.carouselResetTimeout) {
+                clearTimeout(window.carouselResetTimeout);
+            }
+            currentIndex--;
+            updateCarousel();
+        }
+        
+        function goToNext() {
+            if (window.carouselResetTimeout) {
+                clearTimeout(window.carouselResetTimeout);
+            }
+            currentIndex++;
+            updateCarousel();
+        }
+        
+        prevBtn.addEventListener('click', goToPrev);
+        nextBtn.addEventListener('click', goToNext);
+        
+        window.addEventListener('resize', function() {
+            itemsToShow = getItemsToShow();
+            updateCarousel();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.target.closest('.technologies')) {
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    goToPrev();
+                } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    goToNext();
+                }
+            }
+        });
+        
+        let autoScrollInterval;
+        
+        function startAutoScroll() {
+            autoScrollInterval = setInterval(() => {
+                goToNext();
+            }, 4000);
+        }
+        
+        function stopAutoScroll() {
+            clearInterval(autoScrollInterval);
+        }
+        
+        const carousel = document.querySelector('.tech-carousel-wrapper');
+        if (carousel) {
+            carousel.addEventListener('mouseenter', stopAutoScroll);
+            carousel.addEventListener('mouseleave', startAutoScroll);
+        }
+        
+        setupInfiniteLoop();
+    }
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -186,7 +325,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function copyToClipboard(text) {
     navigator.clipboard.writeText(text).then(function() {
-        // Show success message
         const message = document.createElement('div');
         message.textContent = 'Email copied to clipboard!';
         message.style.cssText = `
@@ -284,4 +422,19 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('section[id]').forEach(section => {
         sectionObserver.observe(section);
     });
+
+    const viewMoreBtn = document.getElementById('viewMoreTech');
+    const hiddenTech = document.getElementById('hiddenTech');
+    
+    if (viewMoreBtn && hiddenTech) {
+        viewMoreBtn.addEventListener('click', function() {
+            // Add slide-out animation to the button
+            viewMoreBtn.classList.add('slide-out');
+            
+            setTimeout(() => {
+                viewMoreBtn.style.display = 'none';
+                hiddenTech.classList.add('show');
+            }, 300);
+        });
+    }
 });

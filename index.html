@@ -82,41 +82,64 @@
         <section id="technologies" class="technologies">
             <div class="container">
                 <h2>What I'm working with</h2>
-                <div class="tech-grid">
-                    <div class="tech-items">
-                        <div class="tech-item">
-                            <i class="fab fa-html5 fa-bounce"></i>
-                            <span>HTML</span>
-                            <span class="tech-status learnt">Learnt</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-css3-alt fa-bounce"></i>
-                            <span>CSS</span>
-                             <span class="tech-status learnt">Learnt</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-js-square fa-bounce"></i>
-                            <span>JavaScript</span>
-                            <span class="tech-status learnt">Learnt</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fa-brands fa-python fa-bounce"></i>
-                            <span>Python</span>
-                            <span class="tech-status learnt">Learnt</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fa-brands fa-react fa-bounce"></i>
-                            <span>React.Js</span>
-                            <span class="tech-status learning">Learning</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fa-solid fa-c fa-bounce"></i>
-                            <span>C#</span>
-                            <span class="tech-status learning">Learning</span>
-                        </div>
+                <div class="tech-carousel-wrapper">
+                    <button class="carousel-nav carousel-prev" id="carouselPrev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="tech-carousel">
+                        <div class="tech-track" id="techTrack">
+                            <div class="tech-item">
+                                <i class="fab fa-html5 fa-bounce"></i>
+                                <span>HTML</span>
+                                <span class="tech-status learnt">Proficient</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-css3-alt fa-bounce"></i>
+                                <span>CSS</span>
+                                <span class="tech-status learnt">Proficient</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-js-square fa-bounce"></i>
+                                <span>JavaScript</span>
+                                <span class="tech-status learnt">Proficient</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fa-brands fa-python fa-bounce"></i>
+                                <span>Python</span>
+                                <span class="tech-status learnt">Intermediate</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fa-brands fa-react fa-bounce"></i>
+                                <span>React.js</span>
+                                <span class="tech-status learnt">Intermediate</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-node-js fa-bounce"></i>
+                                <span>Node.js</span>
+                                <span class="tech-status learnt">Intermediate</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fa-solid fa-c fa-bounce"></i>
+                                <span>C#</span>
+                                <span class="tech-status learning">Learning</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fa-brands fa-php fa-bounce"></i>
+                                <span>PHP</span>
+                                <span class="tech-status learning">Learning</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-database fa-bounce"></i>
+                                <span>SQL</span>
+                                <span class="tech-status learning">Learning</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <button class="carousel-nav carousel-next" id="carouselNext">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div class="fade-overlay fade-left"></div>
+                    <div class="fade-overlay fade-right"></div>
                 </div>
             </div>
         </section>
@@ -139,7 +162,7 @@
                             <p>I created a web application for my personal use which allows ease of input when creating guitar tabs, i always found other applications were tedious.</p>
                             <br>
 
-                            <a href="" class="learn-more">More information coming soon!</a>
+                            <a href="ProjectsMoreInfo/GuitarTabCreatorInfo.html" class="learn-more">More information coming soon!</a>
                         </div>
                     </div>
                     <div class="project-item">
@@ -156,7 +179,7 @@
                             <p>I created a Chess engine that plays to my level and in my style of chess.</p>
                             <br> 
                             <br> 
-                            <a href="#" class="learn-more">More information coming soon!</a>
+                            <a href="ProjectsMoreInfo/PersonalisedChessBotInfo.html" class="learn-more">More information coming soon!</a>
                         </div>
                     </div>
                     <!--<div class="project-item">
