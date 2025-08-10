@@ -659,7 +659,6 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
     color: none;
-    /* prevent edge-to-edge on wide and small screens */
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
@@ -1061,5 +1060,6 @@ html {
 
 
     
+
 
 
