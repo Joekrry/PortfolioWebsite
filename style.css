@@ -655,14 +655,19 @@ h2 {
     z-index: 5;
 }
 
-.projects-grid {
+.projects-grid 
+{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
     color: none;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.project-item {
+.project-item 
+{
     border-radius: 12px;
     padding: 1.5rem;
     position: relative;
@@ -670,7 +675,8 @@ h2 {
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     transition: all 0.3s ease;
 }
-.project-item::before {
+.project-item::before 
+{
     content: '';
     position: absolute;
     top: 0;
@@ -685,56 +691,61 @@ h2 {
     transition: all 0.4s ease;
 }
 
-.project-item:nth-child(1)::before {
-    background-image: url('imgs/GuitarTabCreator.png');
-}
-
-.project-item:nth-child(2)::before {
+.project-item:nth-child(2)::before 
+{
     background-image: url('imgs/PS2EMULATOR.jpg');
 }
 
 
-.project-item:hover {
+.project-item:hover 
+{
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.6);
 }
 
-.project-item:hover::before {
+.project-item:hover::before 
+{
     opacity: 0.6;
     filter: blur(2px);
     transform: scale(1.02);
 }
 
-.project-icon {
+.project-icon 
+{
     margin-bottom: 1rem;
     position: relative;
     z-index: 1;
 }
 
-.project-icon i {
+.project-icon i 
+{
     font-size: 3rem;
     color: #f5f5dc;
 }
 
-.project-content {
+.project-content 
+{
     position: relative;
     z-index: 1;
 }
 
-.project-content h3 {
+.project-content h3 
+{
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: #f5f5dc;
 }
 
-.project-tags {
+.project-tags 
+{
     display: flex;
     gap: 0.5rem;
     margin-bottom: 1rem;
     flex-wrap: wrap;
 }
 
-.tag {
+.tag 
+{
     background: #1f1f1f;
     color: #f5f5dc;
     padding: 0.3rem;
@@ -743,23 +754,27 @@ h2 {
     transition: all 0.3s ease;
     opacity: 0.5;
 }
-.tag:hover {
+.tag:hover 
+{
     background: #3a3a3a;
     opacity: 1;
     transform: translateY(-2px);
 }
 
-.contact {
+.contact 
+{
     background: #0a0a0a;
 }
 
-.contact-info {
+.contact-info 
+{
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
 }
 
-.contact-info p {
+.contact-info p 
+{
     font-size: 1.1rem;
     margin-bottom: 2rem;
     color: #e8e8e8;
