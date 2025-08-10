@@ -514,7 +514,6 @@ h2 {
     border: 1px solid rgba(255, 165, 0, 0.3);
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
     .tech-carousel-wrapper {
         padding: 0 60px;
@@ -690,7 +689,7 @@ h2 {
 }
 
 .project-item:nth-child(1)::before {
-    background-image: url('imgs/GuitarTabCreator.png');
+    background-image: url('imgs/PS2EMULATOR.jpg');
 }
 
 .project-item:nth-child(2)::before {
@@ -1062,4 +1061,5 @@ html {
 
 
     
+
 
