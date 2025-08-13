@@ -687,14 +687,10 @@ h2 {
     transition: all 0.4s ease;
 }
 
-.project-item:nth-child(1)::before {
+.project-item:nth-child(1)::before 
+{
     background-image: url('imgs/PS2EMULATOR.jpg');
 }
-
-.project-item:nth-child(2)::before {
-    background-image: url('imgs/PS2EMULATOR.jpg');
-}
-
 
 .project-item:hover {
     transform: translateY(-2px);
@@ -1060,6 +1056,7 @@ html {
 
 
     
+
 
 
 
