@@ -682,11 +682,11 @@ h2 {
 }
 
 .projects-grid {
-    display: grid;
+    display: row;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
     color: none;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -717,6 +717,11 @@ h2 {
 .project-item:nth-child(1)::before 
 {
     background-image: url('imgs/PS2EMULATOR.jpg') !important;
+}
+
+.project-item:nth-child(2)::before 
+{
+    background-image: url('imgs/GeometryWars.jpg') !important;
 }
 
 .project-item:hover {
