@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joseph Kerry Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://sets.hugeicons.com/YOUR-SET-ID.css" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -22,13 +22,13 @@
                 </div>
                 <div class="work-status">
                     <div class="pulse-circle"></div>
-                    <span>Looking for internship!</span>
+                    <span>Looking for Work!</span>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#home">About</a></li>
                     <li><a href="#technologies">Technologies</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#experience">Education</a></li>
+                    <li><a href="#experience">History</a></li>
                     <li><a href="#blog">Blog</a></li>
                     
                 </ul>
@@ -65,8 +65,8 @@
                             </a>
                         </div>
                         <div class="hero-description">
-                            <p><strong>Nottingham, England</strong></p>
-                            <p>Law with Business graduate & hobbyist gamer, I aspire to be a Front-End or Back-End Engineer with proficiency in .NET application development and data engineering. I want to explore my options within my aspired specialisations to find what I perform best at and enjoy.</p>
+                            <p><strong>West Bridgford, Nottingham, England</strong></p>
+                            <p>Bachelor of Law with Honours Graduate, Student Master of Science in Software Engineering with a focus on C# and .NET application development.</p>
                         </div>
                     </div>
                     <div class="hero-image">
@@ -82,7 +82,7 @@
 
         <section id="technologies" class="technologies">
             <div class="container">
-                <h2>What I'm working with</h2>
+                <h2 class="scroll-animate-up">What I'm working with</h2>
                 <div class="tech-carousel-wrapper">
                     <button class="carousel-nav carousel-prev" id="carouselPrev">
                         <i class="fas fa-chevron-left"></i>
@@ -152,9 +152,9 @@
 
         <section id="projects" class="projects">
             <div class="container">
-                <h2>My personal projects</h2>
+                <h2 class="scroll-animate-up">My personal projects</h2>
                 <div class="projects-grid">
-                    <div class="project-item">
+                    <div class="project-item scroll-animate-up">
                         <div class="project-icon">
                             <span style="font-size: 4em; filter: grayscale(100%);">🎮</span>
                         </div>
@@ -170,7 +170,7 @@
                         </div>
                     </div>
 
-                    <div class="project-item">
+                    <div class="project-item scroll-animate-up">
                         <div class="project-icon">
                             <span style="font-size: 4em; filter: grayscale(100%);">🎮</span>
                         </div>
@@ -186,28 +186,71 @@
                         </div>
                     </div>
                 </div>
+                <div class="tech-stack-button-container">
+                    <a href="more-info-projects/project-overview.html">
+                        <button class="view-tech-stack-btn">View All Projects</button>
+                    </a>
+                </div>
             </div>
         </section>
-
+      
         <section id="experience" class="experience">
             <div class="container">
-                <h2>Education History</h2>
-                <div class="experience-grid">
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <h3>Nottingham Trent University</h3>
-                            <span class="role">MSc Software Engineering</span>
-                            <br>
-                            <span class="duration">Sep 2025 - 2026</span>
+                <h2 class="scroll-animate-up">History</h2>
+                <div class="timeline">
+                    <div class="timeline-item scroll-animate-left">
+                        <div class="timeline-date">
+                            <span>2025 - 2026</span>
                         </div>
-                        <p></p>
+                        <div class="timeline-content">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-card">
+                                <h3>MSc Software Engineering @ NTU</h3>
+                                <h4>My modules</h4>
+                                <p>Advanced Software Development, System Analysis and Design, Mobile Systems, Software Design and Development, Software Project Management, Research Methods & a final year Major Project. <p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <h3>Nottingham Trent University</h3>
-                            <span class="role">LLB Law with Business</span>
-                            <br>
-                            <span class="duration">Sep 2022 - June 2025</span>
+                    
+                    <div class="timeline-item scroll-animate-right">
+                        <div class="timeline-date">
+                            <span>2022 - 2025</span>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-card">
+                                <h3>LLB Law with Business</h3>
+                                <h4>Nottingham Trent University</h4>
+                                <p>I realised half way through my degree that becoming a lawyer was not something I wanted to do, and shifted my focus towards technology and software development that I had always enjoyed since I was young.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <span>Oct, 2023</span>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-card">
+                                <h3>Started Programming Journey</h3>
+                                <h4>Self-Taught</h4>
+                                <p>Began learning web development technologies and frameworks including HTML, CSS, JavaScript, React, Node.js and more! </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item scroll-animate-right">
+                        <div class="timeline-date">
+                            <span>2022</span>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-card">
+                                <h3>Built my first computer</h3>
+                                <h4>Personal Project</h4>
+                                <p>Assembled my first custom PC, gaining hands-on experience with hardware components and system configuration.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -215,10 +258,10 @@
         </section>
         <section id="blog" class="blog">
             <div class="container">
-                <h2>Blog</h2>
+                <h2 class="scroll-animate-up">Blog</h2>
                 <div class="blog-posts">
 
-                    <div class="blog-post">
+                    <div class="blog-post scroll-animate-left">
                         <h6>02/09/2025</h6>
                         <h3><a href="BlogPosts/BlogPost2.html">Current issues I have identified.</a></h3>
                         <p>One issue i have noted is the scalability of the blog aspect of...</p>
@@ -226,7 +269,7 @@
 
                     <br>
 
-                    <div class="blog-post">
+                    <div class="blog-post scroll-animate-right">
                         <h6>16/08/2025</h6>
                         <h3><a href="BlogPosts/BlogPost1.html">My history and rationale.</a></h3>
                         <p>I was first introduced to the principles of Software Engineering and Computer Science through...</p>

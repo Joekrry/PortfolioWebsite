@@ -438,3 +438,60 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Scroll Animation Observer
+const scrollAnimationObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+        } else {
+            // Remove animate class when element leaves viewport
+            entry.target.classList.remove('animate');
+        }
+    });
+}, { 
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+});
+
+// Timeline specific observer with staggered animation
+const timelineObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Add a small delay for timeline items to create staggered effect
+            const timelineItems = entry.target.querySelectorAll('.timeline-item');
+            timelineItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add('animate');
+                }, index * 200); // 200ms delay between each item
+            });
+        } else {
+            // Remove animate class from all timeline items when timeline leaves viewport
+            const timelineItems = entry.target.querySelectorAll('.timeline-item');
+            timelineItems.forEach(item => {
+                item.classList.remove('animate');
+            });
+        }
+    });
+}, { 
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Observe all scroll animation elements
+    document.querySelectorAll('.scroll-animate, .scroll-animate-up, .scroll-animate-left, .scroll-animate-right').forEach(element => {
+        scrollAnimationObserver.observe(element);
+    });
+    
+    // Observe timeline container for staggered animation
+    const timelineContainer = document.querySelector('.timeline');
+    if (timelineContainer) {
+        timelineObserver.observe(timelineContainer);
+    }
+    
+    // Also observe individual timeline items as backup
+    document.querySelectorAll('.timeline-item').forEach(element => {
+        scrollAnimationObserver.observe(element);
+    });
+});
